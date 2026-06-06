@@ -1,7 +1,8 @@
 Frontend environment
 --------------------
 
-This folder is a Create React App; environment variables must be prefixed with `REACT_APP_`.
+
+This frontend uses Vite. Environment variables for Vite must be prefixed with `VITE_`.
 
 Setup:
 
@@ -10,16 +11,16 @@ Setup:
 ```bash
 cd frontend
 cp .env.example .env
-# edit .env as needed (set REACT_APP_API_URL)
+# edit .env as needed (set VITE_API_URL)
 ```
 
-2. Start the dev server:
+2. Install and start the dev server:
 
 ```bash
-npm install
-npm start
+pnpm install # or npm install
+pnpm dev     # or npm run dev
 ```
 
 Usage:
 
-- `REACT_APP_API_URL` — base URL for API requests (e.g. `http://localhost:5000/api`). The frontend's API client already falls back to `/api` when this is not set.
+- `VITE_API_URL` — base URL for API requests (e.g. `http://localhost:5000/api`). The frontend's API client falls back to `/api` when this is not set.
